@@ -4,7 +4,7 @@ class Bottles
     when 0
       "No more bottles of milk on the wall, " +
       "no more bottles of milk.\n" +
-      "Go to the store and buy some more," + 
+      "Go to the store and buy some more, " + 
       "99 bottles of milk on the wall.\n"
     when 1
       "1 bottle of milk on the wall, " +
@@ -24,7 +24,7 @@ class Bottles
     end
   end
 
-  def verses(_, _)
-    verse(99) + "\n" + verse(98)
+  def verses(upper, lower)
+    upper.downto(lower).map { |i| verse(i) }.join("\n") 
   end
 end
