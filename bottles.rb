@@ -42,8 +42,6 @@ class BottleNumber
     register(candidate)
   end
 
-  BottleNumber.register(self)
-
   attr_reader :number
 
   def initialize(number)
