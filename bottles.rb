@@ -19,11 +19,13 @@ end
 
 class BottleNumber
   def self.for(number)
-    Hash.new(BottleNumber).merge(
-      0 => BottleNumber0,
-      1 => BottleNumber1,
-      6 => BottleNumber6
-    )[number].new(number)
+    [BottleNumber6, BottleNumber1, BottleNumber0, BottleNumber].find do |candidate|
+      candidate.handles?(number)
+    end.new(number)
+  end
+
+  def self.handles?(number)
+    true
   end
 
   attr_reader :number
@@ -58,6 +60,10 @@ class BottleNumber
 end
 
 class BottleNumber0 < BottleNumber
+  def self.handles?(number)
+    number == 0 
+  end
+
   def quantity
     "no more"
   end
@@ -72,6 +78,10 @@ class BottleNumber0 < BottleNumber
 end
 
 class BottleNumber1 < BottleNumber
+  def self.handles?(number)
+    number == 1 
+  end
+
   def container
     "bottle"
   end
@@ -82,6 +92,10 @@ class BottleNumber1 < BottleNumber
 end
 
 class BottleNumber6 < BottleNumber
+  def self.handles?(number)
+    number == 6 
+  end
+  
   def quantity
     "1"
   end
