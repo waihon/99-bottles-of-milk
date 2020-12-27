@@ -118,3 +118,6 @@ class BottleNumber6 < BottleNumber
     "six-pack"
   end
 end
+
+class BottleVerse
+end
