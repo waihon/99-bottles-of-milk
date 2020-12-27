@@ -29,7 +29,9 @@ class BottleNumber
   end
 
   def self.registry
-    @registry ||= []
+    # The superclass itself won't get automatically registered
+    # via the inherited hook so we'll need to ensure that it will.
+    @registry ||= [BottleNumber]
   end
 
   def self.register(candidate)
