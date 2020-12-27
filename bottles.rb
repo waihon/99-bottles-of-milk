@@ -28,6 +28,14 @@ class BottleNumber
     true
   end
 
+  def self.registry
+    @registry ||= []
+  end
+
+  def self.register(candidate)
+    registry.prepend(candidate)
+  end
+
   attr_reader :number
 
   def initialize(number)
