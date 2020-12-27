@@ -19,7 +19,7 @@ end
 
 class BottleNumber
   def self.for(number)
-    [BottleNumber6, BottleNumber1, BottleNumber0, BottleNumber].find do |candidate|
+    registry.find do |candidate|
       candidate.handles?(number)
     end.new(number)
   end
