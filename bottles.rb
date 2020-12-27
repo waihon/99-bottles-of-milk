@@ -24,10 +24,6 @@ class BottleNumber
     end.new(number)
   end
 
-  def self.handles?(number)
-    true
-  end
-
   def self.registry
     # The superclass itself won't get automatically registered
     # via the inherited hook so we'll need to ensure that it will.
@@ -40,6 +36,10 @@ class BottleNumber
 
   def self.inherited(candidate)
     register(candidate)
+  end
+
+  def self.handles?(number)
+    true
   end
 
   attr_reader :number
