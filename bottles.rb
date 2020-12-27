@@ -36,6 +36,10 @@ class BottleNumber
     registry.prepend(candidate)
   end
 
+  def self.inherited(candidate)
+    register(candidate)
+  end
+
   BottleNumber.register(self)
 
   attr_reader :number
