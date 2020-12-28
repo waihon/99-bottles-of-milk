@@ -8,14 +8,14 @@ class Bottles
   end
 
   def verse(number)
-    BottleVerse.new(number).verse(number)
+    # BottleVerse.new(number).lyrics
 
-    # bottle_number = BottleNumber.for(number)
+    bottle_number = BottleNumber.for(number)
 
-    # "#{bottle_number} ".capitalize + "of milk on the wall, " +
-    # "#{bottle_number} of milk.\n" +
-    # "#{bottle_number.action}, " +
-    # "#{bottle_number.successor} of milk on the wall.\n"
+    "#{bottle_number} ".capitalize + "of milk on the wall, " +
+    "#{bottle_number} of milk.\n" +
+    "#{bottle_number.action}, " +
+    "#{bottle_number.successor} of milk on the wall.\n"
   end
 end
 
