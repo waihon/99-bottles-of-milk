@@ -134,7 +134,7 @@ class BottleVerse
   def lyrics
     bottle_number = BottleNumber.for(number)
 
-    "#{bottle_number} ".capitalize + "of milk on the wall, " +
+    "#{bottle_number} of milk on the wall, ".capitalize +
     "#{bottle_number} of milk.\n" +
     "#{bottle_number.action}, " +
     "#{bottle_number.successor} of milk on the wall.\n"
