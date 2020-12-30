@@ -403,3 +403,6 @@ class BottlesTest < Minitest::Test
     assert_equal BottleNumber, BottleNumber.for(99).class
   end
 end
+
+class BottleVerseTest < Minitest::Test
+end
