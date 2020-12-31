@@ -5,6 +5,16 @@ require_relative 'bottles'
 
 class CountdownSongTest < Minitest::Test
   def test_a_couple_verses
+    expected =
+      "This is verse 99.\n" +
+      "\n" +
+      "This is verse 98.\n" +
+      "\n" +
+      "This is verse 97.\n"
+      assert_equal(
+        expected,
+        CountdownSong.new(verse_template: VerseFake)
+          .verses(99, 97))
   end
 
   def test_a_couple_verses
