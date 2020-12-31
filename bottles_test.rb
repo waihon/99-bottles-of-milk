@@ -4,6 +4,14 @@ require 'minitest/autorun'
 require_relative 'bottles'
 
 class CountdownSongTest < Minitest::Test
+  def test_verse
+    expected = "This is verse 500.\n"
+    assert_equal(
+      expected,
+      CountdownSong.new(verse_template: VerseFake)
+        .verse(500))
+  end
+
   def test_a_couple_verses
     expected =
       "This is verse 99.\n" +
