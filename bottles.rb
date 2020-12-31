@@ -142,3 +142,9 @@ class BottleVerse
     "#{bottle_number.successor} of milk on the wall.\n"
   end
 end
+
+class VerseFake
+  def self.lyrics(number)
+    "This is verse #{number}.\n"
+  end
+end
