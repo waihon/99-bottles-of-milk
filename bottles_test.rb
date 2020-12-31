@@ -140,3 +140,11 @@ class BottleVerseTest < Minitest::Test
     assert_equal expected, BottleVerse.lyrics(0)
   end
 end
+
+class VerseFakeTest < Minitest::Test
+  include VerseRoleTest
+
+  def setup
+    @role_player = VerseFake
+  end
+end
