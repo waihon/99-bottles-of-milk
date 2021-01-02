@@ -1,2 +1,2 @@
 language = "ruby"
-run = "ruby bottles_test.rb"
+run = "ruby test/bottles_test.rb"

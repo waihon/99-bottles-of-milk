@@ -1,7 +1,7 @@
 # Run the test a the command line with `ruby ./bottles_test.rb`
 
 require 'minitest/autorun'
-require_relative 'bottles'
+require_relative '../lib/bottles'
 
 module VerseRoleTest
   def test_plays_verse_role
