@@ -1,6 +1,7 @@
 # Run the test a the command line with `ruby ./bottles_test.rb`
 
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative '../lib/bottles'
 
 module VerseRoleTest
